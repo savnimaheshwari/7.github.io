@@ -1,10 +1,11 @@
 import React from "react";
 import "../styles/Projects.css";
 import FolderOpenRoundedIcon from "@material-ui/icons/FolderOpenRounded";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import OpenInNewIcon from "@material-ui/icons/OpenInNew";
 import FadeInSection from "./FadeInSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Carousel from "react-bootstrap/Carousel";
-import ExternalLinks from "./ExternalLinks";
 
 class Projects extends React.Component {
   constructor() {
@@ -15,11 +16,29 @@ class Projects extends React.Component {
     };
     this.handleSelect = this.handleSelect.bind(this);
   }
+
   handleSelect(eventKey) {
     this.setState({
       activeKey: eventKey
     });
   }
+
+  // External Links component with conditional icon rendering
+  ExternalLinks = ({ githubLink, openLink }) => (
+    <div className="external-links">
+      {githubLink && (
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          <GitHubIcon style={{ fontSize: 32 }} />
+        </a>
+      )}
+      {openLink && (
+        <a href={openLink} target="_blank" rel="noopener noreferrer">
+          <OpenInNewIcon style={{ fontSize: 32 }} />
+        </a>
+      )}
+    </div>
+  );
+
   render() {
     const spotlightProjects = {
       "": {
@@ -41,6 +60,7 @@ class Projects extends React.Component {
         image: "/assets/image.png"
       }
     };
+
     const projects = {
       "Purdue IE (Industrial Engineering) Research": {
         desc:
@@ -59,34 +79,30 @@ class Projects extends React.Component {
       "Bookstore management software": {
         desc:
           "For my IBDP Computer Science Internal Assessment, I developed a Bookstore Management Software. The project streamlined inventory, sales, and customer management processes. It featured functionalities like tracking stock levels, generating invoices, and maintaining a customer database, all built to improve efficiency and enhance user experience for bookstore operations.",
-        techStack: "Java, MySQL",
-        link: "",
-        open: ""
+        techStack: "Java, MySQL"
       },
       "Kathak: Visharad": {
         desc:
           "I obtained the Visharad Pratham certificate in Kathak after 8 years, equivalent to a Bachelor's in dance. I’ve taught Kathak to kids as part of a social program and participated in stage shows.",
         techStack: "Dancing (practical + theory)",
-        open: "",
-        link: "https://drive.google.com/file/d/1Ce-X5fOm9c4_uSBxgQE02VG01Mgk2jyF/view?usp=sharing"
+        open: "https://drive.google.com/file/d/1Ce-X5fOm9c4_uSBxgQE02VG01Mgk2jyF/view?usp=sharing"
       },
-      "Project on on AI-Based Switching Mechanisms for Wireless Charging Systems for EVs": {
+      "Project on AI-Based Switching Mechanisms for Wireless Charging Systems for EVs": {
         desc:
           "Working with Professor Tiwari, ex-Dean of IIT Kharagpur, I focused on applying AI to optimize configurations and architecture in wireless charging systems.",
         techStack: "MATLAB",
-        open: "",
-        link: "https://drive.google.com/file/d/1CO-Lj5h8z93VLv5lgXaYjy264_hgZbKM/view?usp=sharing"
+        open: "https://drive.google.com/file/d/1CO-Lj5h8z93VLv5lgXaYjy264_hgZbKM/view?usp=sharing"
       }
     };
 
     return (
       <div id="projects">
         <div className="section-header ">
-          <span className="section-title">/projects/certifications</span>
+          <span className="section-title">projects/certifications</span>
         </div>
         <Carousel>
           {Object.keys(spotlightProjects).map((key, i) => (
-            <Carousel.Item>
+            <Carousel.Item key={i}>
               <img
                 className="d-block w-100"
                 src={spotlightProjects[key]["image"]}
@@ -101,10 +117,10 @@ class Projects extends React.Component {
                       {spotlightProjects[key]["techStack"]}
                     </p>
                   </p>
-                  <ExternalLinks
+                  <this.ExternalLinks
                     githubLink={spotlightProjects[key]["link"]}
                     openLink={spotlightProjects[key]["open"]}
-                  ></ExternalLinks>
+                  />
                 </Carousel.Caption>
               </div>
             </Carousel.Item>
@@ -113,20 +129,17 @@ class Projects extends React.Component {
         <div className="project-container">
           <ul className="projects-grid">
             {Object.keys(projects).map((key, i) => (
-              <FadeInSection delay={`${i + 1}00ms`}>
+              <FadeInSection key={i} delay={`${i + 1}00ms`}>
                 <li className="projects-card">
                   <div className="card-header">
                     <div className="folder-icon">
-                      <FolderOpenRoundedIcon
-                        style={{ fontSize: 35 }}
-                      ></FolderOpenRoundedIcon>
+                      <FolderOpenRoundedIcon style={{ fontSize: 32 }} />
                     </div>
-                    <ExternalLinks
-                      githubLink={projects[key]["link"]}
-                      openLink={projects[key]["open"]}
-                    ></ExternalLinks>
+                    <this.ExternalLinks
+                      githubLink={projects[key].link}
+                      openLink={projects[key].open}
+                    />
                   </div>
-
                   <div className="card-title">{key}</div>
                   <div className="card-desc">{projects[key]["desc"]}</div>
                   <div className="card-tech">{projects[key]["techStack"]}</div>
