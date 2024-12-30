@@ -37,6 +37,7 @@
   color: var(--slate);
   text-align: center;
   font-weight: 300;
+  margin-bottom: 20px; /* Add space after the paragraphs */
   font-size: 48px;
 }
 
@@ -44,7 +45,8 @@
   color: var(--slate);
   font-family: "NTR", sans-serif;
   font-size: 22px;
-  text-align: center;
+  text-align: justify;
+  
   max-width: 600px;
   padding-bottom: 50px;
 }

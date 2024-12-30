@@ -85,7 +85,7 @@ min-height: 50vh;
 }
 
 .carousel-inner {
-  height: 500px;
+  height: auto;
   border-radius: 24px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
@@ -105,7 +105,6 @@ min-height: 50vh;
   max-width: 500px;
   right: unset !important;
   left: 25% !important;
-  user-select: none;
 }
 
 .carousel-caption h3 {

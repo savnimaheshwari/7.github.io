@@ -29,23 +29,30 @@ class Intro extends React.Component {
         <Typist avgTypingDelay={120}>
           <span className="intro-title">
             {"hi, "}
-            <span className="intro-name">{"gazi"}</span>
+            <span className="intro-name">{"savni"}</span>
             {" here."}
           </span>
         </Typist>
         <FadeInSection>
-          <div className="intro-subtitle">I create stuff sometimes.</div>
+          <div className="intro-subtitle">I code and write stuff sometimes.</div>
           <div className="intro-desc">
-            I'm a software engineer from Toronto, Canada. I'm fascinated by
-            large-scale, high-impact products and contributed to major feature launches in
-            industry-leading services as well as apps that have 100M+ installs.
+            My name is Savni Maheshwari, and I am an undergraduate student at{' '}
+            <a href="https://www.purdue.edu/">Purdue University</a>, pursuing a
+            Bachelor's degree in {' '} <a href="https://www.cs.purdue.edu/">Data Science</a>, offered by the CS dept. along with a certificate in
+            Entrepreneurship & Innovation.
+            <p>
+              I am currently seeking internships for Summer 2025 in roles related
+              to machine learning and data science. With a passion for leveraging
+              data-driven insights, I am eager to contribute to innovative
+              projects and grow my expertise in these fields.
+            </p>
           </div>
           <a
-            href="mailto:gazijarin@gmail.com"
+            href="mailto:maheshwarisavni@gmail.com"
             className="intro-contact"
           >
             <EmailRoundedIcon></EmailRoundedIcon>
-            {" Say hi!"}
+            {" Get in touch !"}
           </a>
         </FadeInSection>
       </div>

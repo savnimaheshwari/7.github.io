@@ -22,92 +22,76 @@ class Projects extends React.Component {
   }
   render() {
     const spotlightProjects = {
-      "No Man's Land": {
-        title: "no man's land",
+      "": {
+        title: "AI Advisor for College Students",
         desc:
-          "A third-person survival-mode game where you battle against time and space to return to Earth.",
-        techStack: "C# (UNITY)",
-        link: "https://github.com/slakh96/no-mans-land",
-        open: "https://gazijarin.itch.io/no-mans-land",
-        image: "/assets/nomansland.png"
+          "I helped develop advisor-student conversations, including audio transcription, using AI techniques.",
+        techStack: "Python , Llama3 , HuggingFace",
+        open: "https://github.com/AI-Student-Helper",
+        link: "https://mlpurdue.notion.site/8e83150770684e118ed6f423ba54fb81?v=b403456229e8436f8f80740ac735e90a&p=791db14a85574334af541d6ff7757cc7&pm=s",
+        image: "/assets/mlproject.png"
       },
       Truth: {
-        title: "truth",
+        title: "HELLo: a social media platform",
         desc:
-          "A three.js simulation of the planet system revolving around a monolith.",
-        techStack: "JAVASCRIPT (THREE.JS)",
-        link: "https://github.com/gazijarin/truth",
-        open: "https://gazijarin.github.io/Truth/",
-        image: "/assets/truth.png"
-      },
-      "Tall Tales": {
-        title: "tall tales",
-        desc:
-          "A multi-player story-telling web game for 3-5 players. Its usage of sockets to allow for concurrent gameplay, connecting friends across the internet.",
-        techStack: "NODE.JS (SOCKET.IO), REACT.JS, MONGODB",
-        link: "https://github.com/gazijarin/TallTales",
-        open: "https://talltales.herokuapp.com/",
-        image: "/assets/talltales.png"
+          "A social media application created where users can upload posts, friend or unfriend others, block people, and like or comment on posts. The project focused on implementing key OOP principles, was for my CS 180 class.",
+        techStack: "Java (Frontend+Backend)",
+        open: "https://github.com/fayeteras/Team-Project",
+        link: "https://docs.google.com/presentation/d/1jCSo-N4jeNgjq41tZrvZ5GmvaxUJQRoZcdW_bq2RLT8/edit#slide=id.g2d03de5f53e_3_737",
+        image: "/assets/image.png"
       },
       Portfolio: {
-        title: "portfolio.js",
+        title: "Resume wesbite (personal)",
         desc:
-          "A small JS library that helps with clear and succinct data presentation.",
+          "My version of the portfolio wesbite that you are currently viewing",
         techStack: "NODE.JS (EXPRESS.JS)",
-        link: "https://github.com/gazijarin/Portfolio.js",
-        open: "https://afternoon-ocean-92382.herokuapp.com/",
+        link: "",
+        open: "",
         image: "/assets/portfolio.png"
       }
     };
     const projects = {
-      "TDSB Homework Management Interface": {
+      "Purdue IE (Industrial Engineering) Research": {
         desc:
-          "An application created for Toronto District School Board, with a Flask back-end and a Vue front-end.",
-        techStack: "Python (Flask), Vue.js, Bootstrap, SQL",
-        link: "https://github.com/gazijarin/TDSBHomeworkManagement",
-        open: "https://tdsb-app.herokuapp.com/"
+          "Prepared a dataset from 2013-2023 on electric vehicle registrations and associated state-level variables. Analyzed the relationships using supervised machine learning methods. Presented the results of the analysis.",
+        techStack: "R, Machine Learning, Python",
+        link: "https://docs.google.com/presentation/d/1F9UZ1B06Vppn5-6rvqEe9CUf33BZT47qTisyD0mCP7Q/edit?usp=sharing",
+        open: "https://github.com/savnimaheshwari/EV-Research---IE-4900"
       },
-      "Adam A.I.": {
+      "Social Media/Gym Post Sentiment Analysis (PHIL 208)": {
         desc:
-          "A self-learning A.I. that learns to traverse through a complex maze using the genetic algorithm.",
-        techStack: "Javascript, HTML / CSS",
-        link: "https://github.com/gazijarin/adamai",
-        open: "https://gazijarin.github.io/AdamAI/"
-      },
-      "Distributed Logging and Monitoring System": {
-        desc:
-          "A system that establishes an ORM connection to a Prisma client in order to communicate logs from microservices.",
-        techStack: "Node.js (Express.js), React.js, PostgreSQL",
+          "My team and I addressed the pervasive influence of social media, particularly by fitness influencers. We conducted sentiment analysis on a vast dataset of gym-related content across various social media and developed a website for 20,000+ college students to use.",
+        techStack: "Data collection , Data analysis",
         link:
-          "https://github.com/gazijarin/Distributed-Logging-and-Monitoring-System"
+          "https://drive.google.com/file/d/1AULR6kgrWeMQUMp8wkosE4K0TxQ58bcl/view?usp=sharing"
       },
-      "Odin Bot": {
+      "Bookstore management software": {
         desc:
-          "A Telegram bot that helps you excel on your daily tasks through Node NLP.",
-        techStack: "Javascript, Node.js, Natural NLP, Telegram API",
-        link: "https://github.com/gazijarin/OdinBot",
+          "For my IBDP Computer Science Internal Assessment, I developed a Bookstore Management Software. The project streamlined inventory, sales, and customer management processes. It featured functionalities like tracking stock levels, generating invoices, and maintaining a customer database, all built to improve efficiency and enhance user experience for bookstore operations.",
+        techStack: "Java, MySQL",
+        link: "",
         open: ""
       },
-      "Game Centre": {
+      "Kathak: Visharad": {
         desc:
-          "An Android app consisting of three board games, including multiplayer, autosave, user authentication, etc.",
-        techStack: "Java, Android Studio",
-        link: "https://github.com/gazijarin/gamecentre",
-        open: ""
+          "I obtained the Visharad Pratham certificate in Kathak after 8 years, equivalent to a Bachelor's in dance. I’ve taught Kathak to kids as part of a social program and participated in stage shows.",
+        techStack: "Dancing (practical + theory)",
+        link: "",
+        open: "https://drive.google.com/file/d/1Ce-X5fOm9c4_uSBxgQE02VG01Mgk2jyF/view?usp=sharing"
       },
-      "Minimax Stonehenge": {
+      "Project on on AI-Based Switching Mechanisms for Wireless Charging Systems for EVs": {
         desc:
-          "Two-player, zero-sum game with a strategic Minimax artificial intelligence.",
-        techStack: "Python",
-        link: "https://github.com/gazijarin/stonehenge",
-        open: ""
+          "Working with Professor Tiwari, ex-Dean of IIT Kharagpur, I focused on applying AI to optimize configurations and architecture in wireless charging systems.",
+        techStack: "MATLAB",
+        link: "",
+        open: "https://drive.google.com/file/d/1CO-Lj5h8z93VLv5lgXaYjy264_hgZbKM/view?usp=sharing"
       }
     };
 
     return (
       <div id="projects">
         <div className="section-header ">
-          <span className="section-title">/ pet projects</span>
+          <span className="section-title">/projects/certifications</span>
         </div>
         <Carousel>
           {Object.keys(spotlightProjects).map((key, i) => (
