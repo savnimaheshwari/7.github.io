@@ -22,7 +22,7 @@ class Credits extends React.Component {
         <div id="credits">
           <div className="ending-credits">
             <div> By Savni Maheshwari. </div>
-            <div> Inspired by gazijarn.</div>
+            <div> Inspired by gazijarin.</div>
           </div>
         </div>
       </FadeInSection>
