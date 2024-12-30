@@ -27,8 +27,8 @@ class Projects extends React.Component {
         desc:
           "I helped develop advisor-student conversations, including audio transcription, using AI techniques.",
         techStack: "Python , Llama3 , HuggingFace",
-        open: "https://github.com/AI-Student-Helper",
-        link: "https://mlpurdue.notion.site/8e83150770684e118ed6f423ba54fb81?v=b403456229e8436f8f80740ac735e90a&p=791db14a85574334af541d6ff7757cc7&pm=s",
+        link: "https://github.com/AI-Student-Helper",
+        open: "https://mlpurdue.notion.site/8e83150770684e118ed6f423ba54fb81?v=b403456229e8436f8f80740ac735e90a&p=791db14a85574334af541d6ff7757cc7&pm=s",
         image: "/assets/mlproject.png"
       },
       Truth: {
@@ -36,8 +36,8 @@ class Projects extends React.Component {
         desc:
           "A social media application created where users can upload posts, friend or unfriend others, block people, and like or comment on posts. The project focused on implementing key OOP principles, was for my CS 180 class.",
         techStack: "Java (Frontend+Backend)",
-        open: "https://github.com/fayeteras/Team-Project",
-        link: "https://docs.google.com/presentation/d/1jCSo-N4jeNgjq41tZrvZ5GmvaxUJQRoZcdW_bq2RLT8/edit#slide=id.g2d03de5f53e_3_737",
+        link: "https://github.com/fayeteras/Team-Project",
+        open: "https://docs.google.com/presentation/d/1jCSo-N4jeNgjq41tZrvZ5GmvaxUJQRoZcdW_bq2RLT8/edit#slide=id.g2d03de5f53e_3_737",
         image: "/assets/image.png"
       }
     };
@@ -46,14 +46,14 @@ class Projects extends React.Component {
         desc:
           "Prepared a dataset from 2013-2023 on electric vehicle registrations and associated state-level variables. Analyzed the relationships using supervised machine learning methods. Presented the results of the analysis.",
         techStack: "R, Machine Learning, Python",
-        link: "https://docs.google.com/presentation/d/1F9UZ1B06Vppn5-6rvqEe9CUf33BZT47qTisyD0mCP7Q/edit?usp=sharing",
-        open: "https://github.com/savnimaheshwari/EV-Research---IE-4900"
+        open: "https://docs.google.com/presentation/d/1F9UZ1B06Vppn5-6rvqEe9CUf33BZT47qTisyD0mCP7Q/edit?usp=sharing",
+        link: "https://github.com/savnimaheshwari/EV-Research---IE-4900"
       },
       "Social Media/Gym Post Sentiment Analysis (PHIL 208)": {
         desc:
           "My team and I addressed the pervasive influence of social media, particularly by fitness influencers. We conducted sentiment analysis on a vast dataset of gym-related content across various social media and developed a website for 20,000+ college students to use.",
         techStack: "Data collection , Data analysis",
-        link:
+        open:
           "https://drive.google.com/file/d/1AULR6kgrWeMQUMp8wkosE4K0TxQ58bcl/view?usp=sharing"
       },
       "Bookstore management software": {
@@ -67,15 +67,15 @@ class Projects extends React.Component {
         desc:
           "I obtained the Visharad Pratham certificate in Kathak after 8 years, equivalent to a Bachelor's in dance. I’ve taught Kathak to kids as part of a social program and participated in stage shows.",
         techStack: "Dancing (practical + theory)",
-        link: "",
-        open: "https://drive.google.com/file/d/1Ce-X5fOm9c4_uSBxgQE02VG01Mgk2jyF/view?usp=sharing"
+        open: "",
+        link: "https://drive.google.com/file/d/1Ce-X5fOm9c4_uSBxgQE02VG01Mgk2jyF/view?usp=sharing"
       },
       "Project on on AI-Based Switching Mechanisms for Wireless Charging Systems for EVs": {
         desc:
           "Working with Professor Tiwari, ex-Dean of IIT Kharagpur, I focused on applying AI to optimize configurations and architecture in wireless charging systems.",
         techStack: "MATLAB",
-        link: "",
-        open: "https://drive.google.com/file/d/1CO-Lj5h8z93VLv5lgXaYjy264_hgZbKM/view?usp=sharing"
+        open: "",
+        link: "https://drive.google.com/file/d/1CO-Lj5h8z93VLv5lgXaYjy264_hgZbKM/view?usp=sharing"
       }
     };
 
