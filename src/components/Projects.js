@@ -39,15 +39,6 @@ class Projects extends React.Component {
         open: "https://github.com/fayeteras/Team-Project",
         link: "https://docs.google.com/presentation/d/1jCSo-N4jeNgjq41tZrvZ5GmvaxUJQRoZcdW_bq2RLT8/edit#slide=id.g2d03de5f53e_3_737",
         image: "/assets/image.png"
-      },
-      Portfolio: {
-        title: "Resume wesbite (personal)",
-        desc:
-          "My version of the portfolio wesbite that you are currently viewing",
-        techStack: "NODE.JS (EXPRESS.JS)",
-        link: "",
-        open: "",
-        image: "/assets/portfolio.png"
       }
     };
     const projects = {
