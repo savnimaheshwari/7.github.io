@@ -20,7 +20,6 @@ class About extends React.Component {
 
   render() {
     const one = (
-      <div className="inner">
         <div>
           <p>
             At Purdue, I’ve worked on impactful projects like analyzing U.S. electric vehicle adoption with the
@@ -39,7 +38,6 @@ class About extends React.Component {
             Outside of academics and work, I enjoy exploring advancements in science and am always eager to expand my skill set.
           </p>
         </div>
-      </div>
     );
 
     const two = (
