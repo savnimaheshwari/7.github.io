@@ -2,13 +2,14 @@
   <img src="https://img.icons8.com/color/48/000000/magritte.png"/>
 </p>
 <h1 align="center">
-  gazijarin.com - v1
+  https://savni-76.vercel.app/ - v1
 </h1>
 <p align="center">
-  The first iteration of <a href="https://gazijarin.com" target="_blank">gazijarin.com</a> built with React.js leveraging Material UI.
+  The first iteration of <a href="https://savni-76.vercel.app/" target="_blank">my portfolio wesbite</a> built with React.js leveraging Material UI.
 </p>
 
-<img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="https://user-images.githubusercontent.com/32211479/111238274-24f8b100-85cd-11eb-9d5a-00f07cbc05e9.png">
+<img width="1306" alt="Screenshot 2024-12-31 at 04-40-37 Savni" src="/Users/savni/Desktop/Screenshot 2024-12-31 at 04-40-37 Savni.png">
+
 
 ## 🛠 set-up
 
