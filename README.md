@@ -8,7 +8,7 @@
   The first iteration of <a href="https://savni-76.vercel.app/" target="_blank">my portfolio wesbite</a> built with React.js leveraging Material UI.
 </p>
 
-<img width="1306" alt="Screenshot 2024-12-31 at 04-40-37 Savni" src="Screenshot 2024-12-31 at 04-40-37 Savni.png">
+![Screenshot 2024-12-31 at 04-40-37 Savni](https://github.com/user-attachments/assets/14602750-fe2a-468f-bc00-de7b862b4f20)
 
 
 ## 🛠 set-up
