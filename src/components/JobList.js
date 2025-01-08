@@ -99,7 +99,7 @@ const JobList = () => {
         "I graded homework assignments and provided feedback to support their learning."
       ]
     },
-    "Cipla and Accenture": {
+    "Accenture": {
       jobTitle: "AI/ML Intern",
       duration: "JUL 2024 - AUG 2024",
       desc: [
