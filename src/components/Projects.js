@@ -85,8 +85,9 @@ class Projects extends React.Component {
         desc:
           "I obtained the Visharad Pratham certificate in Kathak after 8 years, equivalent to a Bachelor's in dance. I’ve taught Kathak to kids as part of a social program and participated in stage shows.",
         techStack: "Dancing (practical + theory)",
-        open: "https://drive.google.com/file/d/1Ce-X5fOm9c4_uSBxgQE02VG01Mgk2jyF/view?usp=sharing"
+        open: "https://drive.google.com/file/d/1qVCiW7Px6HWCAcE_6w9Dc86xqo5EVIN_/view?usp=sharing"
       },
+
       "Project on AI-Based Switching Mechanisms for Wireless Charging Systems for EVs": {
         desc:
           "Working with Professor Tiwari, ex-Dean of IIT Kharagpur, I focused on applying AI to optimize configurations and architecture in wireless charging systems.",
