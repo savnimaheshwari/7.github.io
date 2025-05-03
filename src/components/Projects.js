@@ -93,7 +93,13 @@ class Projects extends React.Component {
           "Working with Professor Tiwari, ex-Dean of IIT Kharagpur, I focused on applying AI to optimize configurations and architecture in wireless charging systems.",
         techStack: "MATLAB",
         open: "https://drive.google.com/file/d/1CO-Lj5h8z93VLv5lgXaYjy264_hgZbKM/view?usp=sharing"
-      }
+      },
+       "Static Test Pad for Rocket Motors (Avionics Intern@ STAR)": {
+        desc:
+          "My team and I at STAR Labs, Gujurat built a static test pad for high-powered rockets using software like Proteus (avionics bay) and SolidWorks (mechanical design) enhancing reliability by 20%.",
+        techStack: "Proteus, SolidWorks",
+        open:
+          "https://drive.google.com/file/d/1_PwD1YMJ-s3djLAGFhWM5I4kUoq55qGw/view?usp=sharing"}
     };
 
     return (
