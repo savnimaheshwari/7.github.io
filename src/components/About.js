@@ -47,8 +47,8 @@ class About extends React.Component {
     );
 
     const tech_stack = [
-      "Machine Learning", "Data Analysis", "Digital Marketing",
-      "TensorFlow", "MS Office", "Java", "Python"
+      "Machine Learning", "AI", "Data Analysis",
+      "TensorFlow", "Swift", "Java", "Python"
     ];
 
     return (
