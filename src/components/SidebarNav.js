@@ -3,6 +3,7 @@ import { Sidenav } from "rsuite";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import EditIcon from "@material-ui/icons/Edit";  // Import Edit icon
 
 import "../styles/SidebarNav.css";
 import "react-typist/dist/Typist.css";
@@ -57,13 +58,16 @@ class SidebarNav extends React.Component {
         )}
         <div className="sidebar-logos" href="/">
           <a href="mailto:maheshwarisavni@gmail.com">
-            <EmailRoundedIcon style={{ fontSize: 20 }}></EmailRoundedIcon>
+            <EmailRoundedIcon style={{ fontSize: 20 }} />
           </a>
           <a href="https://github.com/savnimaheshwari">
-            <GitHubIcon style={{ fontSize: 19 }}></GitHubIcon>
+            <GitHubIcon style={{ fontSize: 19 }} />
           </a>
           <a href="https://www.linkedin.com/in/savni-maheshwari-0b8849283">
-            <LinkedInIcon style={{ fontSize: 21 }}></LinkedInIcon>
+            <LinkedInIcon style={{ fontSize: 21 }} />
+          </a>
+          <a href="https://pin.it/1hzJz7UCh">
+            <EditIcon style={{ fontSize: 20 }} />  {/* Edit Icon */}
           </a>
         </div>
       </div>
