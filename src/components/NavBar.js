@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import EditIcon from "@material-ui/icons/Edit";  // Import the Edit icon
 import "../styles/NavBar.css";
 
 class NavBar extends React.Component {
@@ -22,16 +23,18 @@ class NavBar extends React.Component {
               <Nav.Link href="#projects">Projects</Nav.Link>
             </Nav>
             <Nav className="ml-auto">
-              <Nav.Link href="maheshwarisavni@gmail.com">
-                <EmailRoundedIcon style={{ fontSize: 20 }}></EmailRoundedIcon>
+              <Nav.Link href="mailto:maheshwarisavni@gmail.com">
+                <EmailRoundedIcon style={{ fontSize: 20 }} />
               </Nav.Link>
               <Nav.Link href="https://github.com/savnimaheshwari" target="_blank">
-                <GitHubIcon style={{ fontSize: 19 }}></GitHubIcon>
+                <GitHubIcon style={{ fontSize: 19 }} />
               </Nav.Link>
               <Nav.Link href="https://www.linkedin.com/in/savni-maheshwari-0b8849283" target="_blank">
-                <LinkedInIcon style={{ fontSize: 21 }}></LinkedInIcon>
+                <LinkedInIcon style={{ fontSize: 21 }} />
               </Nav.Link>
-
+              <Nav.Link href="#edit">
+                <EditIcon style={{ fontSize: 20 }} />  {/* Edit Icon */}
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
