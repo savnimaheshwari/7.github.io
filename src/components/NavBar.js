@@ -32,7 +32,7 @@ class NavBar extends React.Component {
               <Nav.Link href="https://www.linkedin.com/in/savni-maheshwari-0b8849283" target="_blank">
                 <LinkedInIcon style={{ fontSize: 21 }} />
               </Nav.Link>
-              <Nav.Link href="#edit">
+              <Nav.Link href="https://pin.it/1hzJz7UCh">
                 <EditIcon style={{ fontSize: 20 }} />  {/* Edit Icon */}
               </Nav.Link>
             </Nav>
