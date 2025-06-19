@@ -99,16 +99,6 @@ const JobList = () => {
         "I graded homework assignments and provided feedback to support their learning."
       ]
     },
-    "Accenture": {
-      jobTitle: "AI/ML Intern",
-      duration: "JUL 2024 - AUG 2024",
-      desc: [
-        "Worked on the architecture and implementation of a Conversational Interface on Unstructured Data, focusing on Gen AI design patterns.",
-"Delivered an end-to-end solution to interact with unstructured text files using natural language.",
-"Developed a user interface with Streamlit, a vector DB with FAISS for data chunking and vectorization, and a backend layer with FastAPI.",
-"Integrated Azure Open AI using Cipla’s Gen AI foundational layer and used Python for development."
-      ]
-    },
     "STAR LABS Surat": {
       jobTitle: "Avionics Intern @",
       duration: "JUN 2022 - JUL 2022",
