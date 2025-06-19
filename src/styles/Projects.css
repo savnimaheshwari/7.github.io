@@ -1,191 +1,232 @@
+/* Container and grid */
 #projects {
-  margin: auto;
+  margin: 0 auto;
   padding-top: 100px;
   max-width: 1000px;
-  min-height: 50vh;
+  min-height: 60vh;
+  font-family: "NTR", sans-serif;
+  color: var(--slate);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(400px, 1fr)); /* bigger cards, 2 per row */
-  grid-gap: 20px; /* more space between cards */
+  grid-template-columns: repeat(2, minmax(380px, 1fr)); /* 2 columns, bigger cards */
+  grid-gap: 24px;
+  padding: 0 10px;
 }
 
 @media (max-width: 1080px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* responsive smaller cards */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 20px;
   }
 }
 
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 5px;
+  }
+}
+
+/* Card styling */
 .projects-card {
-  position: relative;
-  cursor: default;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding: 3rem 2rem; /* more padding */
-  min-height: 400px; /* taller cards */
   background-color: var(--light-navy);
   border-radius: 16px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  min-height: 440px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease;
+  cursor: default;
+  position: relative;
 }
 
 .projects-card:hover {
-  transform: translateY(-7px);
   background-color: var(--lightest-navy);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 255, 150, 0.25);
 }
 
+/* Card header: icons */
 .card-header {
-  margin-top: -20px;
   display: flex;
-  padding: 1.25em 0 !important;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-top: -18px;
+  margin-bottom: 1rem;
+  padding: 0 0 0.5rem 0;
   border-bottom: none !important;
 }
+
 .folder-icon {
   color: var(--green-bright);
+  font-size: 34px;
 }
 
 .github-icon {
   margin-top: 6px;
+  color: var(--slate);
+  transition: color 0.3s ease;
 }
+
 .github-icon:hover {
   color: var(--green-bright);
 }
 
 .open-icon {
   margin-left: 10px;
-}
-
-.card-title {
-  font-family: "NTR", sans-serif;
-  color: var(--lightest-slate);
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-/* Scrollable description with always visible scrollbar */
-.card-desc {
-  font-family: "NTR", sans-serif;
   color: var(--slate);
-  font-size: 18px;
-  line-height: 1.5;
-  padding-bottom: 20px;
-
-  max-height: 100px; 
-  overflow-y: scroll; /* always show vertical scrollbar */
-  padding-right: 8px; /* prevent scrollbar overlap */
-
-  border-bottom: 1px solid rgba(100, 100, 100, 0.15);
-  margin-bottom: 1rem;
   transition: color 0.3s ease;
 }
 
-.card-desc::-webkit-scrollbar {
-  width: 6px;
+.open-icon:hover {
+  color: var(--green-bright);
 }
+
+/* Project title */
+.card-title {
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--lightest-slate);
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.04em;
+}
+
+/* Project image - natural size but fits container */
+.project-small-image {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 6px 16px rgba(0, 255, 150, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-small-image:hover {
+  box-shadow: 0 12px 36px rgba(0, 255, 150, 0.35);
+}
+
+/* Scrollable description */
+.card-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  max-height: 120px;
+  overflow-y: scroll;
+  padding-right: 10px; /* avoid scrollbar overlap */
+  border-bottom: 1px solid rgba(100, 100, 100, 0.15);
+  margin-bottom: 1.25rem;
+  color: var(--slate);
+  scrollbar-width: thin;
+  scrollbar-color: var(--green-bright) transparent;
+}
+
+/* Scrollbar styling for webkit */
+.card-desc::-webkit-scrollbar {
+  width: 7px;
+}
+
 .card-desc::-webkit-scrollbar-thumb {
   background-color: var(--green-bright);
-  border-radius: 3px;
+  border-radius: 5px;
 }
+
 .card-desc::-webkit-scrollbar-track {
   background: transparent;
 }
 
+/* Tech stack pill style */
 .card-tech {
-  font-family: "NTR", sans-serif;
-  color: white;
   font-size: 16px;
-  margin-top: auto; /* push to bottom */
-  padding: 8px 12px;
+  color: white;
   background-color: var(--green-bright);
-  border-radius: 12px;
-  align-self: flex-start; /* left align */
-  max-width: fit-content;
+  padding: 10px 18px;
+  border-radius: 20px;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0, 128, 0, 0.4);
-  transition: background-color 0.3s ease;
+  max-width: fit-content;
+  align-self: flex-start;
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
+  user-select: none;
 }
 
 .projects-card:hover .card-tech {
-  background-color: #2ecc71; /* lighter green on hover */
+  background-color: #2ecc71; /* lighter green */
+  box-shadow: 0 6px 16px rgba(46, 204, 113, 0.6);
 }
 
-/* Spotlight carousel */
+/* Spotlight carousel styles */
 .carousel.slide {
   max-width: 1000px;
-  margin: 0 auto;
-  padding-bottom: 60px;
+  margin: 0 auto 60px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-inner {
-  height: auto;
   border-radius: 24px;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
 .carousel-inner:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
 }
 
 .carousel img {
   object-fit: contain;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .carousel-caption {
-  font-family: "NTR", sans-serif;
-  max-width: 500px;
-  right: unset !important;
-  left: 25% !important;
+  font-weight: 700;
+  max-width: 520px;
+  left: 20% !important;
+  color: var(--lightest-slate);
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
 }
 
 .carousel-caption h3 {
-  font-size: 38px;
-  font-weight: bold;
-  color: var(--lightest-slate);
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
 }
 
 .carousel-caption p {
-  font-family: "NTR", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--lightest-slate);
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
 }
 
 .carousel-caption p.techStack {
-  font-family: "NTR", sans-serif;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--green-bright);
+  margin-top: 6px;
 }
 
 .carousel-indicators .active {
   background-color: var(--green-bright);
 }
 
+/* Responsive tweaks */
 @media only screen and (max-width: 600px) {
   #projects {
-    height: unset;
-    padding-left: unset;
-    padding-right: unset;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: auto;
   }
+
   .carousel {
     display: none;
   }
-}
 
-/* Bigger project images for crispness */
-.project-small-image {
-  width: 400px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  .projects-card {
+    min-height: 420px;
+    padding: 2rem 1.5rem;
+  }
 }
