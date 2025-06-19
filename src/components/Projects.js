@@ -62,6 +62,21 @@ class Projects extends React.Component {
     };
 
     const projects = {
+       "Drowsy - Alert System": {
+    desc:
+      "Developed a real-time driver drowsiness detection system using computer vision and machine learning.",
+    techStack: "Python, OpenCV, TensorFlow",
+    link: "https://github.com/savnimaheshwari/drowsy",
+    image: "/assets/drowsy.png"
+  },
+
+  "TravelTab - Trip Management App": {
+    desc:
+      "TravelTab is a sleek iOS app that helps you plan group trips, track shared expenses, and get personalized insights using AI",
+    techStack: "Swift, OpenAPI",
+    link: "https://github.com/savnimaheshwari/TravelTab",
+    image: "/assets/traveltab.png"
+  },
       "Purdue IE (Industrial Engineering) Research": {
         desc:
           "Prepared a dataset from 2013-2023 on electric vehicle registrations and associated state-level variables. Analyzed the relationships using supervised machine learning methods. Presented the results of the analysis.",
