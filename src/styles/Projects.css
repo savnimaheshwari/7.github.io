@@ -11,20 +11,54 @@
   min-height: 60vh;
   font-family: "NTR", sans-serif;
   color: var(--slate);
+  position: relative;
 }
 
 /* Horizontally‑scrollable card track */
 .projects-grid {
-  display: flex;               /* horizontal flow */
-  gap: 24px;                   /* space between cards */
-  overflow-x: auto;            /* enable horizontal scroll */
-  padding: 0 10px 10px;        /* room for shadow + scroll snap */
-  scroll-snap-type: x mandatory; /* snap to card edges */
-  -webkit-overflow-scrolling: touch; /* momentum scroll on iOS */
-  scrollbar-width: none;       /* hide scrollbar (Firefox) */
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 10px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 .projects-grid::-webkit-scrollbar {
-  display: none;               /* hide scrollbar (WebKit) */
+  display: none;
+}
+
+/* Arrows */
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--lightest-navy);
+  color: var(--green-bright);
+  border: none;
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+.scroll-arrow:hover {
+  background: var(--light-navy);
+}
+.scroll-left {
+  left: -20px;
+}
+.scroll-right {
+  right: -20px;
+}
+
+@media (max-width: 600px) {
+  .scroll-arrow {
+    display: none;
+  }
 }
 
 /* Responsive spacing tweaks */
@@ -44,8 +78,8 @@
    Card Styling
    =================== */
 .projects-card {
-  flex: 0 0 auto;              /* prevent shrinking & let width rule */
-  width: 380px;                /* card width */
+  flex: 0 0 auto;
+  width: 380px;
   display: flex;
   flex-direction: column;
   background-color: var(--light-navy);
@@ -56,7 +90,7 @@
   transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease;
   cursor: default;
   position: relative;
-  scroll-snap-align: start;    /* align head of card to viewport start */
+  scroll-snap-align: start;
 }
 .projects-card:hover {
   background-color: var(--lightest-navy);
@@ -104,7 +138,7 @@
   letter-spacing: 0.04em;
 }
 
-/* Project image – fixed 240 × 240 px */
+/* Project image */
 .project-small-image {
   width: 240px;
   height: 240px;
@@ -124,7 +158,7 @@
   line-height: 1.6;
   max-height: 120px;
   overflow-y: auto;
-  padding-right: 10px; /* avoid scrollbar overlap */
+  padding-right: 10px;
   border-bottom: 1px solid rgba(100, 100, 100, 0.15);
   margin-bottom: 1.25rem;
   color: var(--slate);
@@ -162,10 +196,7 @@
   box-shadow: 0 6px 16px rgba(46, 204, 113, 0.6);
 }
 
-/* ================
-   Spotlight Carousel
-   (unchanged)
-   ================ */
+/* Spotlight carousel */
 .carousel.slide {
   max-width: 1000px;
   margin: 0 auto 60px;
@@ -212,7 +243,7 @@
   background-color: var(--green-bright);
 }
 
-/* Hide carousel + card tweaks for mobile */
+/* Mobile tweaks */
 @media only screen and (max-width: 600px) {
   #projects {
     padding-left: 10px;
@@ -223,7 +254,7 @@
     display: none;
   }
   .projects-card {
-    width: 300px;      /* narrower card for phone */
+    width: 300px;
     min-height: 420px;
     padding: 2rem 1.5rem;
   }
