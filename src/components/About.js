@@ -55,7 +55,7 @@ class About extends React.Component {
       },
       {
         title: "Software & App Development",
-        items: ["Python", "Java", "Swift", "SwiftUI", "Git", "REST APIs", "Object-Oriented Programming"]
+        items: ["Python", "Java", "Swift", "Git", "REST APIs", "Object-Oriented Programming"]
       }
     ];
 
