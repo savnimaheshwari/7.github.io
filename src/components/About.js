@@ -5,44 +5,59 @@ import FadeInSection from "./FadeInSection";
 class About extends React.Component {
   render() {
     const aboutText = (
-      <div>
-        <p>
-          At Purdue, I’ve worked on impactful projects like analyzing U.S. electric vehicle adoption with the
-          <a href="https://engineering.purdue.edu/uSMART" target="_blank" rel="noreferrer"> uSMART</a> team and building a Deepfake Database of Political Incidents with
-          <a href="https://www.cla.purdue.edu/academic/polsci/research/labs/grail/index.html" target="_blank" rel="noreferrer"> Purdue GRAIL</a>.
-        </p>
-        <p>
-          As a <b>Corporate Liaison</b> for <a href="https://www.linkedin.com/company/cswn/" target="_blank" rel="noreferrer"> Purdue CSWN</a>, I’ve fostered industry partnerships and organized networking events.
-          Additionally, as a <b>CS 193 TA</b>, I’ve mentored 50+ students in Git and LaTeX.
-        </p>
-        <p>
-          Most recently, I’ve been developing an <b>AI-powered student advisor chatbot</b> with Purdue’s
-          <a href="https://ml-purdue.github.io/" target="_blank" rel="noreferrer"> Machine Learning Club</a>, leveraging LLaMA models.
-        </p>
-        <p>
-          Outside of academics and work, I enjoy exploring advancements in science and am always eager to expand my skill set.
-        </p>
-      </div>
-    );
+     <div>
+  <p>
+    My name is Savni Maheshwari, and I’m an undergraduate Data Science student at Purdue University, also pursuing a certificate in Entrepreneurship & Innovation. I’m passionate about applying technology to solve real-world problems and eager to take on impactful projects.
+  </p>
+</div>
+  };
 
     const techCategories = [
-      {
-        title: "AI & Machine Learning",
-        items: ["Machine Learning", "Deep Learning", "AI", "LLaMA", "LangChain", "FAISS"],
-      },
-      {
-        title: "Data Science",
-        items: ["Data Analysis", "Data Visualization", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-      },
-      {
-        title: "Frameworks & Tools",
-        items: ["TensorFlow", "PyTorch", "scikit-learn", "Streamlit", "Azure OpenAI", "Jupyter Notebooks"],
-      },
-      {
-        title: "Software & App Development",
-        items: ["Python", "Java", "Swift", "Git", "REST APIs", "Object-Oriented Programming"],
-      },
-    ];
+  {
+    title: "Frontend",
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Swift",
+      "UI/UX Design"
+    ],
+  },
+  {
+    title: "Backend",
+    items: [
+      "Python",
+      "Java",
+      "Node.js",
+      "REST APIs",
+      "SQL",
+      "Object-Oriented Programming"
+    ],
+  },
+  {
+    title: "AI & Machine Learning",
+    items: [
+      "Machine Learning",
+      "Gen AI",
+      "LLaMA",
+      "LangChain",
+      "FAISS",
+      "scikit-learn"
+    ],
+  },
+  {
+    title: "Frameworks & Tools",
+    items: [
+      "TensorFlow",
+      "PyTorch",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Jupyter Notebooks"
+    ],
+  },
+];
 
     return (
       <div id="about">
