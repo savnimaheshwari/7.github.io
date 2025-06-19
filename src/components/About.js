@@ -6,7 +6,7 @@ class About extends React.Component {
   constructor() {
     super();
     this.state = {
-      expandedCategories: {}, // Track expanded/collapsed per category
+      expandedCategories: {}, // track open/close per category
     };
   }
 
@@ -20,7 +20,7 @@ class About extends React.Component {
   };
 
   render() {
-    const one = (
+    const aboutText = (
       <div>
         <p>
           At Purdue, I’ve worked on impactful projects like analyzing U.S. electric vehicle adoption with the
@@ -66,15 +66,22 @@ class About extends React.Component {
           <div className="section-header">
             <span className="section-title">/ about me</span>
           </div>
+
           <div className="about-content">
+            {/* Image first */}
+            <div className="about-image">
+              <img alt="Savni Maheshwari" src={"/assets/me2.jpg"} />
+            </div>
+
+            {/* Description and tech stack below */}
             <div className="about-description">
-              {one}
+              {aboutText}
 
               <div className="tech-stack-section">
                 <h2 className="tech-stack-main-heading">Technologies I Use</h2>
 
                 {techCategories.map((category, idx) => {
-                  const isExpanded = this.state.expandedCategories[idx] ?? false; // default collapsed
+                  const isExpanded = this.state.expandedCategories[idx] ?? false;
                   return (
                     <FadeInSection delay={`${(idx + 1) * 100}ms`} key={idx}>
                       <div className="tech-category-block">
@@ -107,10 +114,6 @@ class About extends React.Component {
                   );
                 })}
               </div>
-            </div>
-
-            <div className="about-image">
-              <img alt="Savni Maheshwari" src={"/assets/me2.jpg"} />
             </div>
           </div>
         </FadeInSection>
