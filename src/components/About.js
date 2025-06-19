@@ -6,16 +6,20 @@ class About extends React.Component {
   constructor() {
     super();
     this.state = {
-      activeKey: null,
+      expanded: true,
+      activeKey: "1"
     };
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
-  toggleCategory = (key) => {
-    this.setState({ activeKey: this.state.activeKey === key ? null : key });
-  };
+  handleSelect(eventKey) {
+    this.setState({
+      activeKey: eventKey
+    });
+  }
 
   render() {
-    const description = (
+    const one = (
       <div>
         <p>
           At Purdue, I’ve worked on impactful projects like analyzing U.S. electric vehicle adoption with the
@@ -63,36 +67,22 @@ class About extends React.Component {
           </div>
           <div className="about-content">
             <div className="about-description">
-              {description}
-
+              {one}
               <div className="tech-cards">
-                <h2 className="tech-stack-main-heading">Technologies I Use 🛠️</h2>
-                <div className="tech-stack-subheading">→ Tech Stack</div>
-
                 {techCategories.map((category, idx) => (
-                  <div className="tech-card" key={idx}>
-                    <div
-                      className="tech-card-header"
-                      onClick={() => this.toggleCategory(idx)}
-                      style={{ cursor: "pointer" }}
-                    >
+                  <FadeInSection delay={`${idx + 1}00ms`} key={idx}>
+                    <div className="tech-card">
                       <h4>{category.title}</h4>
-                      <span className="dropdown-icon">
-                        {this.state.activeKey === idx ? "▲" : "▼"}
-                      </span>
-                    </div>
-                    {this.state.activeKey === idx && (
-                      <ul className="tech-list">
+                      <ul>
                         {category.items.map((item, i) => (
                           <li key={i}>{item}</li>
                         ))}
                       </ul>
-                    )}
-                  </div>
+                    </div>
+                  </FadeInSection>
                 ))}
               </div>
             </div>
-
             <div className="about-image">
               <img alt="Savni Maheshwari" src={"/assets/me2.jpg"} />
             </div>
