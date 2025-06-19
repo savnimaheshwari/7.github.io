@@ -31,6 +31,17 @@
   font-size: 86px;
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .intro-subtitle {
   margin-top: -36px;
   font-family: "NTR", sans-serif;
@@ -39,7 +50,10 @@
   font-weight: 300;
   margin-bottom: 20px;
   font-size: 48px;
-} 
+  opacity: 0; /* start hidden */
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
 
 @media only screen and (max-width: 600px) {
   #intro {
@@ -64,5 +78,5 @@
   .intro-subtitle {
     margin: 0;
     font-size: 15px;
-  } 
+  }
 }
