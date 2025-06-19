@@ -6,7 +6,7 @@ class About extends React.Component {
   constructor() {
     super();
     this.state = {
-      expandedCategories: {}, // track expanded/collapsed state
+      expandedCategories: {}, // Track expanded/collapsed per category
     };
   }
 
@@ -71,8 +71,10 @@ class About extends React.Component {
               {one}
 
               <div className="tech-stack-section">
+                <h2 className="tech-stack-main-heading">Technologies I Use</h2>
+
                 {techCategories.map((category, idx) => {
-                  const isExpanded = this.state.expandedCategories[idx] ?? true; // default expanded
+                  const isExpanded = this.state.expandedCategories[idx] ?? false; // default collapsed
                   return (
                     <FadeInSection delay={`${(idx + 1) * 100}ms`} key={idx}>
                       <div className="tech-category-block">
