@@ -28,29 +28,37 @@
   font-weight: bold;
 }
 
-/* --- TECH STACK SECTION --- */
+/* --- TECH STACK SECTION (Accordion) --- */
 .tech-stack-section {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  margin-top: 40px;
+  border-top: 2px solid var(--light-navy);
+  padding-top: 30px;
 }
 
 .tech-category-block {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  margin-bottom: 30px;
 }
 
 .tech-category-title {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--green-bright);
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  user-select: none;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-category-title.clickable:hover {
+  color: var(--lightest-green);
 }
 
 .tech-items-grid {
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -59,25 +67,22 @@
 .tech-pill {
   background-color: var(--light-navy);
   color: var(--slate);
-  padding: 8px 16px;
-  font-size: 15px;
-  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14.5px;
+  border-radius: 24px;
   font-weight: 600;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  box-shadow: 0 2px 6px rgba(0, 255, 150, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 255, 150, 0.18);
+  user-select: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.tech-pill i {
-  font-size: 16px;
-  color: var(--green-bright);
 }
 
 .tech-pill:hover {
   background-color: var(--lightest-navy);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* --- ABOUT IMAGE --- */
