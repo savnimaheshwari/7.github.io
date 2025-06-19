@@ -28,7 +28,7 @@
   font-weight: bold;
 }
 
-/* --- TECH STACK SECTION (Accordion + Horizontal Grid) --- */
+/* --- TECH STACK SECTION --- */
 .tech-stack-section {
   margin-top: 40px;
   padding: 20px 25px;
@@ -37,10 +37,25 @@
   border: 1.5px solid var(--light-navy);
 }
 
+/* Main heading above all tech stack categories */
+.tech-stack-main-heading {
+  font-size: 28px;
+  color: var(--green-bright);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 25px;
+  border-bottom: 3px solid var(--green-bright);
+  padding-bottom: 8px;
+  max-width: max-content;
+}
+
+/* Individual category block */
 .tech-category-block {
   margin-bottom: 24px;
 }
 
+/* Category titles */
 .tech-category-title {
   font-size: 18px;
   color: var(--green-bright);
@@ -54,12 +69,14 @@
   align-items: center;
   gap: 6px;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .tech-category-title.clickable:hover {
   color: var(--lightest-green);
 }
 
+/* Grid for tech pills */
 .tech-items-grid {
   margin-top: 0;
   display: grid;
@@ -67,6 +84,7 @@
   gap: 12px 16px; /* row gap 12px, column gap 16px */
 }
 
+/* Tech pills styling */
 .tech-pill {
   background-color: var(--light-navy);
   color: var(--slate);
