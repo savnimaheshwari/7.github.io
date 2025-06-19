@@ -62,7 +62,7 @@ class Projects extends React.Component {
     };
 
     const projects = {
-       "Drowsy - Alert System": {
+       "Drowsy": {
     desc:
       "Developed a real-time driver drowsiness detection system using computer vision and machine learning.",
     techStack: "Python, OpenCV, TensorFlow",
@@ -70,7 +70,7 @@ class Projects extends React.Component {
     image: "/assets/drowsy.png"
   },
 
-  "TravelTab - Trip Management App": {
+  "TravelTab": {
     desc:
       "TravelTab is a sleek iOS app that helps you plan group trips, track shared expenses, and get personalized insights using AI",
     techStack: "Swift, OpenAPI",
