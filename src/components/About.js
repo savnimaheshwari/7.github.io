@@ -68,21 +68,21 @@ class About extends React.Component {
           <div className="about-content">
             <div className="about-description">
               {one}
-              <div className="tech-cards">
-                {techCategories.map((category, idx) => (
-                  <FadeInSection delay={`${idx + 1}00ms`} key={idx}>
-                    <div className="tech-card">
-                      <h4>{category.title}</h4>
-                      <ul>
-                        {category.items.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </FadeInSection>
-                ))}
+
+              <div className="tech-stack-section glass">
+                <h2 className="tech-stack-main-heading">Technologies I Use</h2>
+                <div className="glass-grid">
+                  {techCategories.map((category) =>
+                    category.items.map((item, index) => (
+                      <div className="glass-card" key={`${category.title}-${item}`}>
+                        {item}
+                      </div>
+                    ))
+                  )}
+                </div>
               </div>
             </div>
+
             <div className="about-image">
               <img alt="Savni Maheshwari" src={"/assets/me2.jpg"} />
             </div>
