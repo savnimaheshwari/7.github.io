@@ -32,7 +32,11 @@ class Intro extends React.Component {
             {" here."}
           </span>
         </Typist>
-        {/* Removed intro subtitle and get in touch */}
+        <FadeInSection>
+          <div className="intro-subtitle">
+            i code, create, and consume too much content
+          </div>
+        </FadeInSection>
       </div>
     );
   }
