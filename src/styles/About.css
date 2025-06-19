@@ -28,48 +28,88 @@
   font-weight: bold;
 }
 
-/* --- TECH STACK SECTION --- */
-.tech-cards {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: flex-start;
+/* --- TECH STACK HEADING --- */
+.tech-stack-heading {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--green-bright);
+  letter-spacing: 0.05em;
+  font-family: "NTR", sans-serif;
 }
 
+/* --- TECH CARDS HORIZONTAL SCROLL --- */
+.tech-cards {
+  margin-top: 20px;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--green-bright) transparent;
+}
+
+.tech-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tech-cards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tech-cards::-webkit-scrollbar-thumb {
+  background-color: var(--green-bright);
+  border-radius: 10px;
+}
+
+/* --- INDIVIDUAL TECH CARD --- */
 .tech-card {
   background-color: var(--light-navy);
   color: var(--slate);
   border-radius: 14px;
   padding: 18px 24px;
   box-shadow: 0 2px 8px rgba(0, 255, 150, 0.15);
-  width: 260px;
+  min-width: 260px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
   transition: box-shadow 0.3s ease;
+  cursor: default;
 }
 
 .tech-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 255, 150, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 255, 150, 0.35);
 }
 
-.tech-card h4 {
-  font-weight: 700;
-  font-size: 18px;
+/* --- TECH CARD TITLE --- */
+.tech-card-title {
+  font-weight: 800;
+  font-size: 20px;
   color: var(--green-bright);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--green-bright);
+  padding-bottom: 6px;
   margin-bottom: 12px;
+  letter-spacing: 0.1em;
 }
 
-.tech-card ul {
-  list-style-type: none;
+/* --- NUMBERED TECH ITEMS --- */
+.tech-card-list {
+  list-style-type: decimal;
+  list-style-position: inside;
   padding-left: 0;
   margin: 0;
+  color: var(--slate);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "NTR", sans-serif;
 }
 
-.tech-card ul li {
-  font-size: 15px;
-  padding: 6px 0;
+.tech-card-list li {
+  margin: 6px 0;
+  padding-left: 8px;
   border-left: 3px solid var(--green-bright);
-  margin-left: 8px;
-  color: var(--slate);
 }
 
 /* --- ABOUT IMAGE --- */
@@ -125,11 +165,13 @@
   }
 
   .tech-cards {
-    justify-content: center;
+    justify-content: flex-start;
+    padding-bottom: 20px;
   }
 
   .tech-card {
-    width: 100%;
+    min-width: 200px;
+    width: 80vw;
     max-width: 320px;
   }
 }
