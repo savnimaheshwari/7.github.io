@@ -6,21 +6,20 @@ class About extends React.Component {
   constructor() {
     super();
     this.state = {
-      expandedCategories: {}, // track open/close per category
+      expanded: true,
+      activeKey: "1"
     };
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
-  toggleCategory = (idx) => {
-    this.setState((state) => ({
-      expandedCategories: {
-        ...state.expandedCategories,
-        [idx]: !state.expandedCategories[idx],
-      },
-    }));
-  };
+  handleSelect(eventKey) {
+    this.setState({
+      activeKey: eventKey
+    });
+  }
 
   render() {
-    const aboutText = (
+    const one = (
       <div>
         <p>
           At Purdue, I’ve worked on impactful projects like analyzing U.S. electric vehicle adoption with the
@@ -44,20 +43,20 @@ class About extends React.Component {
     const techCategories = [
       {
         title: "AI & Machine Learning",
-        items: ["Machine Learning", "Deep Learning", "AI", "LLaMA", "LangChain", "FAISS"],
+        items: ["Machine Learning", "Deep Learning", "AI", "LLaMA", "LangChain", "FAISS"]
       },
       {
         title: "Data Science",
-        items: ["Data Analysis", "Data Visualization", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+        items: ["Data Analysis", "Data Visualization", "Pandas", "NumPy", "Matplotlib", "Seaborn"]
       },
       {
         title: "Frameworks & Tools",
-        items: ["TensorFlow", "PyTorch", "scikit-learn", "Streamlit", "Azure OpenAI", "Jupyter Notebooks"],
+        items: ["TensorFlow", "PyTorch", "scikit-learn", "Streamlit", "Azure OpenAI", "Jupyter Notebooks"]
       },
       {
         title: "Software & App Development",
-        items: ["Python", "Java", "Swift", "Git", "REST APIs", "Object-Oriented Programming"],
-      },
+        items: ["Python", "Java", "Swift", "Git", "REST APIs", "Object-Oriented Programming"]
+      }
     ];
 
     return (
@@ -66,54 +65,26 @@ class About extends React.Component {
           <div className="section-header">
             <span className="section-title">/ about me</span>
           </div>
-
           <div className="about-content">
-            {/* Image first */}
+            <div className="about-description">
+              {one}
+              <div className="tech-cards">
+                {techCategories.map((category, idx) => (
+                  <FadeInSection delay={`${idx + 1}00ms`} key={idx}>
+                    <div className="tech-card">
+                      <h4>{category.title}</h4>
+                      <ul>
+                        {category.items.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </FadeInSection>
+                ))}
+              </div>
+            </div>
             <div className="about-image">
               <img alt="Savni Maheshwari" src={"/assets/me2.jpg"} />
-            </div>
-
-            {/* Description and tech stack below */}
-            <div className="about-description">
-              {aboutText}
-
-              <div className="tech-stack-section">
-                <h2 className="tech-stack-main-heading">Technologies I Use</h2>
-
-                {techCategories.map((category, idx) => {
-                  const isExpanded = this.state.expandedCategories[idx] ?? false;
-                  return (
-                    <FadeInSection delay={`${(idx + 1) * 100}ms`} key={idx}>
-                      <div className="tech-category-block">
-                        <h3
-                          className="tech-category-title clickable"
-                          onClick={() => this.toggleCategory(idx)}
-                          aria-expanded={isExpanded}
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" || e.key === " ") {
-                              this.toggleCategory(idx);
-                            }
-                          }}
-                        >
-                          {category.title} {isExpanded ? "▲" : "▼"}
-                        </h3>
-
-                        {isExpanded && (
-                          <div className="tech-items-grid">
-                            {category.items.map((item, i) => (
-                              <div className="tech-pill" key={i}>
-                                {item}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </FadeInSection>
-                  );
-                })}
-              </div>
             </div>
           </div>
         </FadeInSection>
