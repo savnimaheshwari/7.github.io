@@ -6,7 +6,7 @@
   margin: auto;
   max-width: 1000px;
   padding-top: 200px;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .Typist {
@@ -31,7 +31,7 @@
   font-size: 86px;
 }
 
-/* .intro-subtitle {
+.intro-subtitle {
   margin-top: -36px;
   font-family: "NTR", sans-serif;
   color: var(--slate);
@@ -39,7 +39,7 @@
   font-weight: 300;
   margin-bottom: 20px;
   font-size: 48px;
-} */
+} 
 
 @media only screen and (max-width: 600px) {
   #intro {
@@ -61,8 +61,8 @@
     font-size: 36px;
   }
 
-  /* .intro-subtitle {
+  .intro-subtitle {
     margin: 0;
-    font-size: 28px;
-  } */
+    font-size: 20px;
+  } 
 }
