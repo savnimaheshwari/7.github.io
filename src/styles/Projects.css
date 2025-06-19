@@ -1,4 +1,9 @@
-/* Container and grid */
+/* =============================
+   Projects Section Styles
+   Horizontal scrollable cards
+   ============================= */
+
+/* Container */
 #projects {
   margin: 0 auto;
   padding-top: 100px;
@@ -8,41 +13,51 @@
   color: var(--slate);
 }
 
+/* Horizontally‑scrollable card track */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(380px, 1fr)); /* 2 columns, bigger cards */
-  grid-gap: 24px;
-  padding: 0 10px;
+  display: flex;               /* horizontal flow */
+  gap: 24px;                   /* space between cards */
+  overflow-x: auto;            /* enable horizontal scroll */
+  padding: 0 10px 10px;        /* room for shadow + scroll snap */
+  scroll-snap-type: x mandatory; /* snap to card edges */
+  -webkit-overflow-scrolling: touch; /* momentum scroll on iOS */
+  scrollbar-width: none;       /* hide scrollbar (Firefox) */
+}
+.projects-grid::-webkit-scrollbar {
+  display: none;               /* hide scrollbar (WebKit) */
 }
 
+/* Responsive spacing tweaks */
 @media (max-width: 1080px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 20px;
+    gap: 20px;
   }
 }
-
 @media (max-width: 600px) {
   .projects-grid {
-    grid-template-columns: 1fr;
-    padding: 0 5px;
+    gap: 16px;
+    padding: 0 5px 10px;
   }
 }
 
-/* Card styling */
+/* ===================
+   Card Styling
+   =================== */
 .projects-card {
+  flex: 0 0 auto;              /* prevent shrinking & let width rule */
+  width: 380px;                /* card width */
   display: flex;
   flex-direction: column;
   background-color: var(--light-navy);
   border-radius: 16px;
-  padding: 2.5rem 2rem 2.5rem 2rem;
+  padding: 2.5rem 2rem;
   min-height: 440px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease;
   cursor: default;
   position: relative;
+  scroll-snap-align: start;    /* align head of card to viewport start */
 }
-
 .projects-card:hover {
   background-color: var(--lightest-navy);
   transform: translateY(-8px);
@@ -59,28 +74,23 @@
   padding: 0 0 0.5rem 0;
   border-bottom: none !important;
 }
-
 .folder-icon {
   color: var(--green-bright);
   font-size: 34px;
 }
-
 .github-icon {
   margin-top: 6px;
   color: var(--slate);
   transition: color 0.3s ease;
 }
-
 .github-icon:hover {
   color: var(--green-bright);
 }
-
 .open-icon {
   margin-left: 10px;
   color: var(--slate);
   transition: color 0.3s ease;
 }
-
 .open-icon:hover {
   color: var(--green-bright);
 }
@@ -98,13 +108,12 @@
 .project-small-image {
   width: 240px;
   height: 240px;
-  object-fit: cover;          /* fill the square neatly */
+  object-fit: cover;
   border-radius: 14px;
   margin-bottom: 1.25rem;
   box-shadow: 0 6px 16px rgba(0, 255, 150, 0.15);
   transition: box-shadow 0.3s ease;
 }
-
 .project-small-image:hover {
   box-shadow: 0 12px 36px rgba(0, 255, 150, 0.35);
 }
@@ -114,7 +123,7 @@
   font-size: 18px;
   line-height: 1.6;
   max-height: 120px;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-right: 10px; /* avoid scrollbar overlap */
   border-bottom: 1px solid rgba(100, 100, 100, 0.15);
   margin-bottom: 1.25rem;
@@ -122,22 +131,18 @@
   scrollbar-width: thin;
   scrollbar-color: var(--green-bright) transparent;
 }
-
-/* Scrollbar styling for webkit */
 .card-desc::-webkit-scrollbar {
   width: 7px;
 }
-
 .card-desc::-webkit-scrollbar-thumb {
   background-color: var(--green-bright);
   border-radius: 5px;
 }
-
 .card-desc::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Tech stack pill style */
+/* Tech stack pill */
 .card-tech {
   font-size: 16px;
   color: white;
@@ -152,13 +157,15 @@
   cursor: default;
   user-select: none;
 }
-
 .projects-card:hover .card-tech {
-  background-color: #2ecc71; /* lighter green */
+  background-color: #2ecc71;
   box-shadow: 0 6px 16px rgba(46, 204, 113, 0.6);
 }
 
-/* Spotlight carousel styles */
+/* ================
+   Spotlight Carousel
+   (unchanged)
+   ================ */
 .carousel.slide {
   max-width: 1000px;
   margin: 0 auto 60px;
@@ -166,22 +173,18 @@
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
-
 .carousel-inner {
   border-radius: 24px;
 }
-
 .carousel-inner:hover {
   transform: scale(1.02);
   transition: transform 0.35s ease;
 }
-
 .carousel img {
   object-fit: contain;
   height: 100%;
   opacity: 0.55;
 }
-
 .carousel-caption {
   font-weight: 700;
   max-width: 520px;
@@ -189,43 +192,38 @@
   color: var(--lightest-slate);
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
 }
-
 .carousel-caption h3 {
   font-size: 40px;
   margin-bottom: 0.5rem;
   letter-spacing: 0.04em;
 }
-
 .carousel-caption p {
   font-size: 19px;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
-
 .carousel-caption p.techStack {
   font-size: 15px;
   font-weight: 700;
   color: var(--green-bright);
   margin-top: 6px;
 }
-
 .carousel-indicators .active {
   background-color: var(--green-bright);
 }
 
-/* Responsive tweaks */
+/* Hide carousel + card tweaks for mobile */
 @media only screen and (max-width: 600px) {
   #projects {
     padding-left: 10px;
     padding-right: 10px;
     min-height: auto;
   }
-
   .carousel {
     display: none;
   }
-
   .projects-card {
+    width: 300px;      /* narrower card for phone */
     min-height: 420px;
     padding: 2rem 1.5rem;
   }
