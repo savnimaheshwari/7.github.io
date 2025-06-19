@@ -28,56 +28,61 @@
   font-weight: bold;
 }
 
-/* --- TECH STACK SECTION --- */
+/* --- TECH STACK SECTION (Tag Cloud Style) --- */
 .tech-stack-section {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  margin-top: 40px;
+  padding: 30px 25px;
+  border-radius: 16px;
+  background-color: var(--dark-navy);
+  border: 1px solid var(--light-navy);
+  box-shadow: 0 4px 20px rgba(0, 255, 150, 0.08);
+  text-align: center;
 }
 
-.tech-category-block {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.tech-category-title {
-  font-size: 20px;
+.tech-stack-main-heading {
+  font-family: "Georgia", serif;
+  font-size: 28px;
   color: var(--green-bright);
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--green-bright);
+  padding-bottom: 6px;
+  display: inline-block;
 }
 
-.tech-items-grid {
+/* --- TAG CLOUD --- */
+.tag-cloud {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
+  padding: 10px;
 }
 
-.tech-pill {
-  background-color: var(--light-navy);
-  color: var(--slate);
-  padding: 8px 16px;
-  font-size: 15px;
+/* Base style for tag */
+.tag-item {
+  display: inline-block;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 2px 6px rgba(0, 255, 150, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.tech-pill i {
-  font-size: 16px;
+  background-color: var(--light-navy);
   color: var(--green-bright);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: default;
+  user-select: none;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 255, 150, 0.1);
 }
 
-.tech-pill:hover {
+/* Random size classes for visual variety */
+.tag-1 { font-size: 15px; }
+.tag-2 { font-size: 17px; }
+.tag-3 { font-size: 19px; font-weight: 700; }
+.tag-4 { font-size: 16px; transform: rotate(-2deg); }
+.tag-5 { font-size: 18px; transform: rotate(2deg); }
+
+.tag-item:hover {
   background-color: var(--lightest-navy);
-  transform: translateY(-2px);
+  transform: scale(1.1);
 }
 
 /* --- ABOUT IMAGE --- */
@@ -130,5 +135,18 @@
 
   .about-content {
     display: unset;
+  }
+
+  .tech-stack-section {
+    padding: 25px 15px;
+  }
+
+  .tech-stack-main-heading {
+    font-size: 22px;
+  }
+
+  .tag-item {
+    font-size: 14px !important;
+    padding: 5px 10px;
   }
 }
