@@ -1,5 +1,35 @@
-/* --- TECH DROPDOWN SECTION --- */
-.tech-dropdown-section {
+/* --- ABOUT CONTAINER --- */
+#about {
+  min-height: 50vh;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 100px;
+}
+
+/* --- ABOUT CONTENT LAYOUT --- */
+.about-content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* --- ABOUT DESCRIPTION --- */
+.about-description {
+  font-family: "NTR", sans-serif;
+  color: var(--slate);
+  max-width: 600px;
+  font-size: 20px;
+  text-align: justify;
+  margin: 0;
+}
+
+.about-description a,
+.about-description b {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* --- TECH CARDS CONTAINER --- */
+.tech-cards {
   margin-top: 40px;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 18px;
@@ -9,62 +39,131 @@
   -webkit-backdrop-filter: blur(6px);
 }
 
+/* --- TECH STACK HEADINGS --- */
 .tech-stack-main-heading {
   font-family: "Georgia", serif;
-  font-size: 26px;
+  font-size: 24px;
   color: var(--green-bright);
   font-weight: 800;
-  margin-bottom: 18px;
+  margin-bottom: 6px;
   text-align: center;
 }
 
-/* --- CATEGORY TITLE --- */
-.tech-dropdown-title {
-  font-size: 18px;
-  font-weight: 600;
+.tech-stack-subheading {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--slate);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* --- EACH TECH CARD --- */
+.tech-card {
   background-color: var(--light-navy);
-  color: var(--green-bright);
-  padding: 10px 15px;
   border-radius: 12px;
+  margin-top: 16px;
+  box-shadow: 0 2px 10px rgba(0, 255, 150, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 255, 150, 0.35);
+}
+
+/* --- CARD HEADER (clickable) --- */
+.tech-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 14px 20px;
   cursor: pointer;
-  margin-top: 14px;
-  transition: background-color 0.2s ease;
+  user-select: none;
+  color: var(--green-bright);
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 12px 12px 0 0;
+  background-color: var(--dark-navy);
+  transition: background-color 0.3s ease;
 }
 
-.tech-dropdown-title:hover {
+.tech-card-header:hover {
   background-color: var(--lightest-navy);
 }
 
 .dropdown-icon {
-  font-size: 14px;
-  color: var(--green-bright);
-}
-
-/* --- COLLAPSIBLE LIST --- */
-.tech-dropdown-list {
-  list-style: none;
-  margin: 10px 0 5px 10px;
-  padding: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.tech-dropdown-list li {
   font-size: 16px;
+}
+
+/* --- LIST OF TECH ITEMS --- */
+.tech-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 12px 30px 20px 30px;
   color: var(--slate);
-  padding: 6px 12px;
+  font-size: 16px;
+}
+
+.tech-list li {
+  padding: 6px 0;
   border-left: 3px solid var(--green-bright);
-  margin: 4px 0;
+  margin-bottom: 8px;
 }
 
-/* --- OPEN CLASS TRANSITION (Optional for animation) --- */
-.tech-dropdown-category.open .tech-dropdown-list {
-  animation: fadeIn 0.3s ease-in-out;
+/* --- ABOUT IMAGE --- */
+.about-image {
+  padding-left: 40px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
+.about-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 30px;
+  box-shadow: 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
+  border: none;
+  transition: transform 0.3s ease;
 }
+
+.about-image:hover {
+  transform: translateY(-7px);
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media only screen and (max-width: 788px) {
+  .about-image img {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #about {
+    height: unset;
+    padding-left: unset;
+    padding-right: unset;
+    padding-top: 30%;
+  }
+
+  .about-content {
+    display: unset;
+  }
+
+  .about-description {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .about-description a,
+  .about-description b {
+    font-size: 17px;
+  }
+
+  .about-image img {
+    display: none;
+  }
+
+  .tech-stack-main-heading {
+    font-size: 22px;
+  }
+
+  .tech-stack-subheading {
+    font-si
