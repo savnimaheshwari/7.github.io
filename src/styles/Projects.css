@@ -94,11 +94,11 @@
   letter-spacing: 0.04em;
 }
 
-/* Project image - natural size but fits container */
+/* Project image – fixed 240 × 240 px */
 .project-small-image {
-  object-fit: contain;
-  max-width: 100%;
-  height: auto;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;          /* fill the square neatly */
   border-radius: 14px;
   margin-bottom: 1.25rem;
   box-shadow: 0 6px 16px rgba(0, 255, 150, 0.15);
