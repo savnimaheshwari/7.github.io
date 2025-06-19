@@ -4,13 +4,13 @@ import FadeInSection from "./FadeInSection";
 
 class About extends React.Component {
   render() {
-    const aboutText = (
-     <div>
-  <p>
-    My name is Savni Maheshwari, and I’m an undergraduate Data Science student at Purdue University, also pursuing a certificate in Entrepreneurship & Innovation. I’m passionate about applying technology to solve real-world problems and eager to take on impactful projects.
-  </p>
-</div>
-  };
+   const aboutText = (
+  <div>
+    <p>
+      My name is <a>Savni Maheshwari</a>, and I’m an undergraduate <a>Data Science</a> student at Purdue University, also pursuing a certificate in <a>Entrepreneurship & Innovation</a>. I’m passionate about applying technology to solve <a>real-world problems</a> and eager to take on <a>impactful projects</a>.
+    </p>
+  </div>
+);
 
     const techCategories = [
   {
