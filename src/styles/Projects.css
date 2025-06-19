@@ -71,8 +71,8 @@
   font-size: 18px;
   padding-bottom: 40px;
 
-  max-height: 100px;      /* limit height */
-  overflow-y: auto;       /* vertical scrollbar */
+  max-height: 100px; 
+  overflow-y: scroll; /* limit height */
   padding-right: 8px;     /* padding so scrollbar doesn’t overlap text */
 }
 
