@@ -68,7 +68,7 @@ class About extends React.Component {
           <div className="about-content">
             <div className="about-description">
               {aboutText}
-              <h3 className="tech-stack-heading">Technologies I Use 🛠️</h3>
+              <h3 className="tech-stack-heading">/ skills 🛠️</h3>
               <div className="tech-cards">
                 {techCategories.map((category, idx) => (
                   <FadeInSection delay={`${idx + 1}00ms`} key={idx}>
