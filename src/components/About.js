@@ -7,7 +7,7 @@ class About extends React.Component {
    const aboutText = (
   <div>
     <p>
-      My name is <a>Savni Maheshwari</a>, and I’m an undergraduate <a>Data Science</a> student at Purdue University, also pursuing a certificate in <a>Entrepreneurship & Innovation</a>. I’m passionate about applying technology to solve <a>real-world problems</a> and eager to take on <a>impactful projects</a>.
+     I’m an undergraduate <a>Data Science (CS) </a> student at <a>Purdue University</a>, also pursuing a certificate in <a>Entrepreneurship & Innovation</a>. I’m passionate about applying technology to solve real-world problems and eager to take on <a>impactful projects</a>.
     </p>
   </div>
 );
