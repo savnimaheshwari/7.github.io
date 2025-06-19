@@ -1,156 +1,70 @@
-/* --- ABOUT CONTAINER --- */
-#about {
-  min-height: 50vh;
-  margin: auto;
-  max-width: 1000px;
-  padding-top: 100px;
-}
-
-/* --- ABOUT CONTENT LAYOUT --- */
-.about-content {
-  display: flex;
-  flex-direction: row;
-}
-
-/* --- ABOUT DESCRIPTION --- */
-.about-description {
-  font-family: "NTR", sans-serif;
-  color: var(--slate);
-  max-width: 600px;
-  font-size: 20px;
-  text-align: justify;
-  margin: 0;
-}
-
-.about-description a,
-.about-description b {
-  font-size: 21px;
-  font-weight: bold;
-}
-
-/* --- TECH STACK SECTION (Floating Glass Style) --- */
-.tech-stack-section.glass {
+/* --- TECH DROPDOWN SECTION --- */
+.tech-dropdown-section {
   margin-top: 40px;
-  padding: 35px 30px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 24px rgba(0, 255, 150, 0.12);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  text-align: center;
-  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 255, 150, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .tech-stack-main-heading {
   font-family: "Georgia", serif;
-  font-size: 28px;
+  font-size: 26px;
   color: var(--green-bright);
   font-weight: 800;
-  margin-bottom: 25px;
-  border-bottom: 2px solid var(--green-bright);
-  padding-bottom: 6px;
-  display: inline-block;
+  margin-bottom: 18px;
+  text-align: center;
 }
 
-/* --- GLASS GRID --- */
-.glass-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 18px;
-  justify-items: center;
-  padding-top: 20px;
-}
-
-/* --- GLASS CARD ITEM --- */
-.glass-card {
-  width: 100%;
-  max-width: 160px;
-  padding: 14px 16px;
-  font-size: 15px;
+/* --- CATEGORY TITLE --- */
+.tech-dropdown-title {
+  font-size: 18px;
   font-weight: 600;
+  background-color: var(--light-navy);
+  color: var(--green-bright);
+  padding: 10px 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.tech-dropdown-title:hover {
+  background-color: var(--lightest-navy);
+}
+
+.dropdown-icon {
+  font-size: 14px;
+  color: var(--green-bright);
+}
+
+/* --- COLLAPSIBLE LIST --- */
+.tech-dropdown-list {
+  list-style: none;
+  margin: 10px 0 5px 10px;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-dropdown-list li {
+  font-size: 16px;
   color: var(--slate);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 255, 150, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 6px 12px;
+  border-left: 3px solid var(--green-bright);
+  margin: 4px 0;
 }
 
-.glass-card:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 6px 24px rgba(0, 255, 150, 0.18);
+/* --- OPEN CLASS TRANSITION (Optional for animation) --- */
+.tech-dropdown-category.open .tech-dropdown-list {
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-/* --- ABOUT IMAGE --- */
-.about-image {
-  padding-left: 40px;
-}
-
-.about-image img {
-  max-width: 300px;
-  height: auto;
-  border-radius: 10px;
-  margin-left: 30px;
-  box-shadow: 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
-  border: none;
-  transition: transform 0.3s ease;
-}
-
-.about-image:hover {
-  transform: translateY(-7px);
-}
-
-/* --- RESPONSIVE STYLES --- */
-@media only screen and (max-width: 788px) {
-  .about-image img {
-    max-width: 200px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #about {
-    height: unset;
-    padding-left: unset;
-    padding-right: unset;
-    padding-top: 30%;
-  }
-
-  .about-content {
-    display: unset;
-  }
-
-  .about-description {
-    font-size: 18px;
-    text-align: justify;
-  }
-
-  .about-description a,
-  .about-description b {
-    font-size: 17px;
-  }
-
-  .about-image img {
-    display: none;
-  }
-
-  .tech-stack-main-heading {
-    font-size: 22px;
-  }
-
-  .glass-card {
-    font-size: 13.5px;
-    padding: 12px;
-  }
-
-  .glass-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 12px;
-  }
-
-  .tech-stack-section.glass {
-    padding: 25px 15px;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
