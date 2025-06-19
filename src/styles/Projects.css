@@ -1,8 +1,8 @@
 #projects {
   margin: auto;
   padding-top: 100px;
-max-width: 1000px;
-min-height: 50vh;
+  max-width: 1000px;
+  min-height: 50vh;
 }
 
 .projects-grid {
@@ -140,4 +140,14 @@ min-height: 50vh;
   .carousel {
     display: none;
   }
+}
+
+/* Small project image */
+.project-small-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
