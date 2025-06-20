@@ -32,7 +32,7 @@ class Intro extends React.Component {
           </span>
         </Typist>
         <div className="intro-subtitle">
-          (i code, create, and consume too much content)
+          i code things, design some, and break a few
         </div>
       </div>
     );
