@@ -3,7 +3,6 @@ import React from "react";
 import "../styles/Intro.css";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
-import FadeInSection from "./FadeInSection";
 import FractalTree from "./FractalTree";
 
 class Intro extends React.Component {
@@ -32,11 +31,9 @@ class Intro extends React.Component {
             {" here."}
           </span>
         </Typist>
-        <FadeInSection>
-          <div className="intro-subtitle">
-            i code, create, and consume too much content
-          </div>
-        </FadeInSection>
+        <div className="intro-subtitle">
+          (i code, create, and consume too much content)
+        </div>
       </div>
     );
   }
