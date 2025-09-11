@@ -14,50 +14,27 @@ class About extends React.Component {
 
     const techCategories = [
   {
-    title: "Frontend",
-    items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Swift",
-      "UI/UX Design"
-    ],
+    title: "Languages",
+    items: ["Java", "Python", "Swift", "JavaScript", "R", "SQL"],
   },
   {
-    title: "Backend",
-    items: [
-      "Python",
-      "Java",
-      "Node.js",
-      "REST APIs",
-      "SQL",
-      "Object-Oriented Programming"
-    ],
+    title: "Libraries/AI",
+    items: ["Pandas", "NumPy", "PyTorch", "scikit-learn", "LangChain", "Hugging Face"],
   },
   {
-    title: "AI & Machine Learning",
-    items: [
-      "Machine Learning",
-      "Gen AI",
-      "LLaMA",
-      "LangChain",
-      "FAISS",
-      "scikit-learn"
-    ],
+    title: "Tools",
+    items: ["GitHub", "Streamlit", "Docker", "VS Code", "Xcode"],
   },
   {
-    title: "Frameworks & Tools",
-    items: [
-      "TensorFlow",
-      "PyTorch",
-      "Pandas",
-      "NumPy",
-      "Matplotlib",
-      "Jupyter Notebooks"
-    ],
+    title: "Data Visualization",
+    items: ["Power BI", "Tableau"],
+  },
+  {
+    title: "Cloud Platforms",
+    items: ["AWS", "Azure"],
   },
 ];
+
 
     return (
       <div id="about">
