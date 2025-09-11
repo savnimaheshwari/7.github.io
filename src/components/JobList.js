@@ -82,20 +82,29 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
+    "Johnson & Johnson": {
+      jobTitle: "Automation & GenAI Intern",
+      duration: "Summer 2025",
+      desc: [
+        "Developed GenAI features for JAIDA assistant, enhancing answer relevance for 1,000+ daily queries.",
+        "Built automated evaluation pipelines, cutting QA time by 40%.",
+        "Streamlined automation workflows aligned with business goals."
+      ]
+    },
     "Purdue College of Science": {
       jobTitle: "COSINE Calculus Tutor (substitute) @",
       duration: "AUG 2024 - PRESENT",
       desc: [
-      "I serve as a COSINE math tutor at Purdue University, specializing in Calculus 1, 2, 3, and Pre-Calculus for undergraduate students."  ,
-"I assist students in understanding complex mathematical concepts and help them improve their problem-solving skills.",
-"I provide group tutoring sessions to support coursework and exam preparation."
+        "I serve as a COSINE math tutor at Purdue University, specializing in Calculus 1, 2, 3, and Pre-Calculus for undergraduate students.",
+        "I assist students in understanding complex mathematical concepts and help them improve their problem-solving skills.",
+        "I provide group tutoring sessions to support coursework and exam preparation."
       ]
     },
     "Purdue Computer Science Dept.": {
       jobTitle: "Undergraduate Teaching Assistant @",
       duration: "AUG 2024 - DEC 2024",
       desc: [
-        "I held online office hours for 50+ freshmen students in the class CS 193 (Tools), helping them with questions about the command line, LaTeX, Git, GitHub, interview preparation, and resume building.",  
+        "I held online office hours for 50+ freshmen students in the class CS 193 (Tools), helping them with questions about the command line, LaTeX, Git, GitHub, interview preparation, and resume building.",
         "I graded homework assignments and provided feedback to support their learning."
       ]
     },
@@ -103,19 +112,11 @@ const JobList = () => {
       jobTitle: "Avionics Intern @",
       duration: "JUN 2022 - JUL 2022",
       desc: [
-        "Collaborated with IIT Madras Aerospace students to design a static test pad for high-powered rockets, enhancing reliability by 20%.",  
-        "Used Proteus for avionics simulation and SolidWorks for mechanical design, contributing to the project’s technical accuracy.",  
+        "Collaborated with IIT Madras Aerospace students to design a static test pad for high-powered rockets, enhancing reliability by 20%.",
+        "Used Proteus for avionics simulation and SolidWorks for mechanical design, contributing to the project’s technical accuracy.",
         "Worked as part of a team to apply engineering knowledge to improve the reliability and functionality of the test pad."
       ]
-    },
-    // TDSB: {
-    //   jobTitle: "Software Engineer @",
-    //   duration: "SEPT 2019 - DEC 2020",
-    //   desc: [
-    //     "Co-developed homework management software integrable with Google Classroom by utilizing the Python’s Flask micro-framework for the back-end API and Vue.js for the front-end UI, in order to translate business requirements into a functional full-stack application."
-    //   ]
-    // },
-    
+    }
   };
 
   const handleChange = (event, newValue) => {
@@ -145,13 +146,11 @@ const JobList = () => {
             {experienceItems[key]["duration"]}
           </div>
           <ul className="job-description">
-            {experienceItems[key]["desc"].map(function (descItem, i) {
-              return (
-                <FadeInSection delay={`${i + 1}00ms`}>
-                  <li key={i}>{descItem}</li>
-                </FadeInSection>
-              );
-            })}
+            {experienceItems[key]["desc"].map((descItem, i) => (
+              <FadeInSection key={i} delay={`${i + 1}00ms`}>
+                <li>{descItem}</li>
+              </FadeInSection>
+            ))}
           </ul>
         </TabPanel>
       ))}
