@@ -82,11 +82,11 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-    "Johnson & Johnson": {
+    "Johnson & Johnson (Global Services)": {
       jobTitle: "Automation & GenAI Intern",
       duration: "Summer 2025",
       desc: [
-        "Developed GenAI features for JAIDA assistant, enhancing answer relevance for 1,000+ daily queries.",
+        "Developed GenAI features for JAIDA (J&J's digital) assistant, enhancing answer relevance for 1,000+ daily queries.",
         "Built automated evaluation pipelines, cutting QA time by 40%.",
         "Streamlined automation workflows aligned with business goals."
       ]
