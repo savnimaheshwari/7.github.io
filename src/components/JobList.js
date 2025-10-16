@@ -82,13 +82,13 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-   "Johnson & Johnson (Global Services)": {
+  "Johnson & Johnson (Global Services)": {
   "jobTitle": "Automation & GenAI Intern",
   "duration": "Summer 2025",
   "desc": [
-    "Designed and deployed GenAI features for JAIDA, J&J's digital assistant, improving conversational relevance for 1,000+ daily queries.",
-    "Built end-to-end ML pipelines for intent detection and semantic analysis, enabling automated evaluation and reducing QA time by 40%.",
-    "Implemented scalable translation and content optimization workflows, supporting real-time multilingual dialogue and streamlining enterprise automation."
+    "Implemented GenAI features for JAIDA, J&J's enterprise digital assistant, enhancing response relevance by integrating intent classification and semantic embedding analysis.",
+    "Built automated evaluation pipelines to measure model performance, identify misclassifications, and guide targeted fine-tuning for improved accuracy.",
+    "Developed dynamic translation and content optimization workflows, enabling real-time, context-aware multilingual responses and streamlining enterprise assistant operations."
   ]
 }
 ,
