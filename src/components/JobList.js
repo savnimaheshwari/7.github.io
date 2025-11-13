@@ -82,15 +82,16 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-    "Johnson & Johnson (Global Services)": {
-      jobTitle: "Automation & GenAI Intern",
-      duration: "Summer 2025",
-      desc: [
-        "Implemented GenAI features for JAIDA, J&J's enterprise digital assistant, enhancing response relevance by integrating intent classification and semantic embedding analysis.",
-        "Built automated evaluation pipelines to measure model performance, identify misclassifications, and guide targeted fine-tuning for improved accuracy.",
-        "Developed dynamic translation and content optimization workflows, enabling real-time, context-aware multilingual responses and streamlining enterprise assistant operations."
-      ]
-    },
+  "Johnson & Johnson (Global Services)": {
+  "jobTitle": "Automation & GenAI Intern",
+  "duration": "Summer 2025",
+  "desc": [
+    "Built dynamic translation features and content ingestion pipelines for JAIDA, J&J's enterprise digital assistant, using RAG-based retrieval and prompt engineering to enable context-aware multilingual responses.",
+    "Engineered automated traceability systems to monitor model performance and track feature deployments in production, ensuring reliability across enterprise operations.",
+    "Optimized SQL workflows and backend pipelines, reducing query response times and delivering faster insights across Procurement, Finance, and HR."
+  ]
+}
+,
     "Purdue College of Science": {
       jobTitle: "COSINE Calculus Tutor (substitute) @",
       duration: "AUG 2024 - PRESENT",
@@ -133,11 +134,11 @@ const JobList = () => {
         className={classes.tabs}
       >
         {Object.keys(experienceItems).map((key, i) => (
-          <Tab key={i} label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
+          <Tab label={isHorizontal ? `0${i}.` : key} {...a11yProps(i)} />
         ))}
       </Tabs>
       {Object.keys(experienceItems).map((key, i) => (
-        <TabPanel key={i} value={value} index={i}>
+        <TabPanel value={value} index={i}>
           <span className="joblist-job-title">
             {experienceItems[key]["jobTitle"] + " "}
           </span>
@@ -146,8 +147,8 @@ const JobList = () => {
             {experienceItems[key]["duration"]}
           </div>
           <ul className="job-description">
-            {experienceItems[key]["desc"].map((descItem, j) => (
-              <FadeInSection key={j} delay={`${j + 1}00ms`}>
+            {experienceItems[key]["desc"].map((descItem, i) => (
+              <FadeInSection key={i} delay={`${i + 1}00ms`}>
                 <li>{descItem}</li>
               </FadeInSection>
             ))}
