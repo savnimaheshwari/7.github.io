@@ -33,7 +33,7 @@ function TabPanel(props) {
       <div
         role="tabpanel"
         hidden={value !== index}
-        id={`vertical-tabpanel-${index}`}
+        id={`vertical-tabpanel`}
         {...other}
       >
         {value === index && (
@@ -49,32 +49,32 @@ function TabPanel(props) {
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired
 };
 
 function a11yProps(index) {
   if (isHorizontal) {
     return {
       id: `full-width-tab-${index}`,
-      "aria-controls": `full-width-tabpanel-${index}`,
+      "aria-controls": `full-width-tabpanel-${index}`
     };
   } else {
     return {
-      id: `vertical-tab-${index}`,
+      id: `vertical-tab-${index}`
     };
   }
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "theme.palette.background.paper",
     display: "flex",
-    height: 300,
+    height: 300
   },
   tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
-  },
+    borderRight: `1px solid ${theme.palette.divider}`
+  }
 }));
 
 const JobList = () => {
@@ -88,8 +88,8 @@ const JobList = () => {
       desc: [
         "Built dynamic translation features and content ingestion pipelines for JAIDA, J&J's enterprise digital assistant, using RAG-based retrieval and prompt engineering to enable context-aware multilingual responses.",
         "Engineered automated traceability systems to monitor model performance and track feature deployments in production, ensuring reliability across enterprise operations.",
-        "Optimized SQL workflows and backend pipelines, reducing query response times and delivering faster insights across Procurement, Finance, and HR.",
-      ],
+        "Optimized SQL workflows and backend pipelines, reducing query response times and delivering faster insights across Procurement, Finance, and HR."
+      ]
     },
     "Purdue College of Science": {
       jobTitle: "COSINE Calculus Tutor (substitute) @",
@@ -97,16 +97,16 @@ const JobList = () => {
       desc: [
         "I serve as a COSINE math tutor at Purdue University, specializing in Calculus 1, 2, 3, and Pre-Calculus for undergraduate students.",
         "I assist students in understanding complex mathematical concepts and help them improve their problem-solving skills.",
-        "I provide group tutoring sessions to support coursework and exam preparation.",
-      ],
+        "I provide group tutoring sessions to support coursework and exam preparation."
+      ]
     },
     "Purdue Computer Science Dept.": {
       jobTitle: "Undergraduate Teaching Assistant @",
       duration: "AUG 2024 - DEC 2024",
       desc: [
         "I held online office hours for 50+ freshmen students in the class CS 193 (Tools), helping them with questions about the command line, LaTeX, Git, GitHub, interview preparation, and resume building.",
-        "I graded homework assignments and provided feedback to support their learning.",
-      ],
+        "I graded homework assignments and provided feedback to support their learning."
+      ]
     },
     "STAR LABS Surat": {
       jobTitle: "Avionics Intern @",
@@ -114,10 +114,10 @@ const JobList = () => {
       desc: [
         "Collaborated with IIT Madras Aerospace students to design a static test pad for high-powered rockets, enhancing reliability by 20%.",
         "Used Proteus for avionics simulation and SolidWorks for mechanical design, contributing to the project’s technical accuracy.",
-        "Worked as part of a team to apply engineering knowledge to improve the reliability and functionality of the test pad.",
-      ],
-    },
-  };
+        "Worked as part of a team to apply engineering knowledge to improve the reliability and functionality of the test pad."
+      ]
+    }
+  }; // ✅ ← Correct closing brace here
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
