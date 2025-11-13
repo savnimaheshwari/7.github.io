@@ -86,9 +86,9 @@ const JobList = () => {
       jobTitle: "Automation & GenAI Intern",
       duration: "Summer 2025",
       desc: [
-        "Built dynamic translation features and content ingestion pipelines for JAIDA, J&J's enterprise digital assistant, using RAG-based retrieval and prompt engineering to enable context-aware multilingual responses.",
-        "Engineered automated traceability systems to monitor model performance and track feature deployments in production, ensuring reliability across enterprise operations.",
-        "Optimized SQL workflows and backend pipelines, reducing query response times and delivering faster insights across Procurement, Finance, and HR."
+        "Implemented GenAI features for JAIDA, J&J's enterprise digital assistant, enhancing response relevance by integrating intent classification and semantic embedding analysis.",
+        "Built automated evaluation pipelines to measure model performance, identify misclassifications, and guide targeted fine-tuning for improved accuracy.",
+        "Developed dynamic translation and content optimization workflows, enabling real-time, context-aware multilingual responses and streamlining enterprise assistant operations."
       ]
     },
     "Purdue College of Science": {
@@ -117,7 +117,7 @@ const JobList = () => {
         "Worked as part of a team to apply engineering knowledge to improve the reliability and functionality of the test pad."
       ]
     }
-  }; // ✅ ← Correct closing brace here
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
