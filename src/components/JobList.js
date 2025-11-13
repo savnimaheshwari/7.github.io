@@ -88,7 +88,7 @@ const JobList = () => {
   "desc": [
     "Built dynamic translation features and content ingestion pipelines for JAIDA, J&J's enterprise digital assistant, using RAG-based retrieval and prompt engineering to enable context-aware multilingual responses.",
     "Engineered automated traceability systems to monitor model performance and track feature deployments in production, ensuring reliability across enterprise operations.",
-    "Optimized SQL workflows and backend pipelines, reducing query execution time by 40% and delivering faster insights across Procurement, Finance, and HR."
+    "Optimized SQL workflows and backend pipelines, reducing query response times and delivering faster insights across Procurement, Finance, and HR."
   ]
 }
   ]
