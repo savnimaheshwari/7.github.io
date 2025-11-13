@@ -4,36 +4,37 @@ import FadeInSection from "./FadeInSection";
 
 class About extends React.Component {
   render() {
-    const aboutText = (
-      <div>
-        <p>
-          I’m an undergraduate <span>Data Science (CS)</span> student at <span>Purdue University</span>, also pursuing a certificate in <span>Entrepreneurship & Innovation</span>. I’m passionate about applying technology to solve real-world problems and eager to take on <span>impactful projects</span>.
-        </p>
-      </div>
-    );
+   const aboutText = (
+  <div>
+    <p>
+     I’m an undergraduate <a>Data Science (CS) </a> student at <a>Purdue University</a>, also pursuing a certificate in <a>Entrepreneurship & Innovation</a>. I’m passionate about applying technology to solve real-world problems and eager to take on <a>impactful projects</a>.
+    </p>
+  </div>
+);
 
     const techCategories = [
-      {
-        title: "Languages",
-        items: ["Java", "Python", "Swift", "JavaScript", "R", "SQL"],
-      },
-      {
-        title: "Libraries/AI",
-        items: ["Pandas", "NumPy", "PyTorch", "scikit-learn", "LangChain", "Hugging Face"],
-      },
-      {
-        title: "Tools",
-        items: ["GitHub", "Streamlit", "Docker", "VS Code", "Xcode"],
-      },
-      {
-        title: "Data Visualization",
-        items: ["Power BI", "Tableau"],
-      },
-      {
-        title: "Cloud Platforms",
-        items: ["AWS", "Azure"],
-      },
-    ];
+  {
+    title: "Languages",
+    items: ["Java", "Python", "Swift", "JavaScript", "R", "SQL"],
+  },
+  {
+    title: "Libraries/AI",
+    items: ["Pandas", "NumPy", "PyTorch", "scikit-learn", "LangChain", "Hugging Face"],
+  },
+  {
+    title: "Tools",
+    items: ["GitHub", "Streamlit", "Docker", "VS Code", "Xcode"],
+  },
+  {
+    title: "Data Visualization",
+    items: ["Power BI", "Tableau"],
+  },
+  {
+    title: "Cloud Platforms",
+    items: ["AWS", "Azure"],
+  },
+];
+
 
     return (
       <div id="about">
